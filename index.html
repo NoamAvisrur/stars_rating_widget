@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Music Player</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="newcss.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="reviews_container" ng-app="myApp" ng-controller="Ctrl as C" ng-cloak>
+        <div id="review_container">
+            <div id="reviews_form">
+                <h3>submit your rate:</h3>
+                <div id="reviews_form_stars_container">
+                    <span class="review_star">&#9734;</span>
+                    <span class="review_star">&#9734;</span>
+                    <span class="review_star">&#9734;</span>
+                    <span class="review_star">&#9734;</span>
+                    <span class="review_star">&#9734;</span>
+                </div>
+                <button ng-click="C.push()">Submit</button>
+            </div>
+            <div id="review_view">
+                <h3>Reviews: {{ C.rates.length }}</h3>
+                <div id="review_stats"> 
+                    <div class="reviews_stats_row" ng-repeat="(key, value) in C.ratesVals">
+                        <span class="reviews_stats_row_stars">{{key}}</span>
+                        <span class="reviews_stats_pass"></span>
+                        <span class="reviews_stats_row_count">{{value}}</span>
+                    </div>                  
+                </div>
+                <h3>Reviews Average: {{ C.average | toFixed }}</h3>
+            </div>    
+        </div>    
+    </div>
+    <script type="text/javascript" src="angular.min.js"></script>
+     <script type="text/javascript" src="controller.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

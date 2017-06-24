@@ -1,0 +1,60 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+#review_container{
+    width: 50%;
+    border: 1px solid #965896;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+}
+#review_container #reviews_form button{
+    background-color: #965896;
+    color: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    border:none;
+    cursor: pointer;
+    margin-top: 0.5rem;
+} 
+#reviews_form h3{
+    margin-top: 1rem;
+    margin-bottom: 0;
+    color: #965896;
+}
+#review_container > div .review_star{
+    font-size: 2rem;
+    color: #965896;
+    cursor: pointer;
+}
+
+#review_view h3{
+    margin-top: 1rem;
+    border-top: 1px solid #ddd;
+    margin: 1rem;
+    padding: 1rem;
+    margin-bottom: 0;
+    color: #965896;
+}
+
+.reviews_stats_row {
+    display: flex;
+    margin-bottom: .5rem;
+}
+
+.reviews_stats_row_stars, .reviews_stats_row_count{
+    font-weight: bold;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.reviews_stats_pass {
+    --star-persentage: 0%;
+    flex-grow: 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-image: linear-gradient(to right, #bb9e46 var(--star-persentage), white var(--star-persentage));
+    background-clip: content-box;
+}
+ 
