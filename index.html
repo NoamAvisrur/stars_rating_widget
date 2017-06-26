@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Music Player</title>
+    <title>Stars Rating widget</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="newcss.css" rel="stylesheet" type="text/css" />
@@ -18,10 +18,11 @@
                     <span class="review_star">&#9734;</span>
                     <span class="review_star">&#9734;</span>
                 </div>
+                <input type="text" placeholder="add a comment">
                 <button ng-click="C.push()">Submit</button>
             </div>
             <div id="review_view">
-                <h3>Reviews: {{ C.rates.length }}</h3>
+                <h3 id="reviews_title">Reviews: {{ C.rates.length }}</h3>
                 <div id="review_stats"> 
                     <div class="reviews_stats_row" ng-repeat="(key, value) in C.ratesVals">
                         <span class="reviews_stats_row_stars">{{key}}</span>
@@ -29,8 +30,26 @@
                         <span class="reviews_stats_row_count">{{value}}</span>
                     </div>                  
                 </div>
-                <h3>Reviews Average: {{ C.average | toFixed }}</h3>
-            </div>    
+                <h3 id="average_title">Reviews Average: {{ C.average | toFixed }}</h3>
+                <div id="average_stars_container">
+                    <span class="average_star">&#9734;</span>
+                    <span class="average_star">&#9734;</span>
+                    <span class="average_star">&#9734;</span>
+                    <span class="average_star">&#9734;</span>
+                    <span class="average_star">&#9734;</span>
+                </div>
+            </div> 
+            <div class="view_comments">
+                <h3 id="comments_title">Comments:</h3>
+
+                    <div class="comment" ng-repeat="comment in C.comments">{{ comment.comment }}
+                        <div>
+                            <span ng-repeat="star in C.StarsObject" ng-bind-html="star | unsafe"></span>
+                        </div>
+		    </div>
+
+
+	    </div>   
         </div>    
     </div>
     <script type="text/javascript" src="angular.min.js"></script>

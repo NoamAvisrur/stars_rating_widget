@@ -28,14 +28,21 @@
     color: #965896;
     cursor: pointer;
 }
-
-#review_view h3{
+.average_star{
+    font-size: 2rem;
+    color: #965896;
+}
+#reviews_title, #average_title, #comments_title{
     margin-top: 1rem;
     border-top: 1px solid #ddd;
     margin: 1rem;
     padding: 1rem;
     margin-bottom: 0;
     color: #965896;
+}
+
+#average_title {
+    padding-bottom: 0px;
 }
 
 .reviews_stats_row {
@@ -57,4 +64,19 @@
     background-image: linear-gradient(to right, #bb9e46 var(--star-persentage), white var(--star-persentage));
     background-clip: content-box;
 }
- 
+
+input[type="text"]{
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.comment {
+    width: 80%;
+    height: 10vh;
+    background-color: #eee;
+    margin: 0 auto;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
