@@ -2,15 +2,18 @@
 <html>
 <head>
     <title>Stars Rating widget</title>
+    <link rel="shortcut icon" type="image/png" href="https://cdn2.iconfinder.com/data/icons/crystalproject/crystal_project_256x256/apps/keditbookmarks.png"/>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="newcss.css" rel="stylesheet" type="text/css" />
+     <link href="Media_Queries.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div id="reviews_container" ng-app="myApp" ng-controller="Ctrl as C" ng-cloak>
         <div id="review_container">
             <div id="reviews_form">
-                <h3>submit your rate:</h3>
+                <h2>submit your rate:</h2>
                 <div id="reviews_form_stars_container">
                     <span class="review_star">&#9734;</span>
                     <span class="review_star">&#9734;</span>
@@ -44,7 +47,7 @@
 
                     <div class="comment" ng-repeat="comment in C.comments">{{ comment.comment }}
                         <div>
-                            <span ng-repeat="star in C.StarsObject" ng-bind-html="star | unsafe"></span>
+                            <span ng-repeat="star in C.comments[0].StarsObj" ng-bind-html="star | unsafe"></span>
                         </div>
 		    </div>
 

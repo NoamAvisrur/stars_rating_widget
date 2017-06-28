@@ -3,34 +3,37 @@
 }
 
 #review_container{
-    width: 50%;
-    border: 1px solid #965896;
-    margin: auto;
     text-align: center;
-    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
 }
 #review_container #reviews_form button{
-    background-color: #965896;
+    background-color: #3f51b5;
     color: #fff;
     border-radius: 3px;
     padding: 10px;
     border:none;
     cursor: pointer;
-    margin-top: 0.5rem;
-} 
-#reviews_form h3{
     margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+} 
+#reviews_form{
+    background-color: #00abe5;
+}
+#reviews_form h2{
+    margin-top: 1rem;
+    padding-top: 1rem;
     margin-bottom: 0;
-    color: #965896;
+    color:  #3f51b5;
 }
 #review_container > div .review_star{
-    font-size: 2rem;
-    color: #965896;
+    font-size: 3rem;
+    color: #ffc107;
     cursor: pointer;
 }
 .average_star{
     font-size: 2rem;
-    color: #965896;
+    color: #bb9e46;
 }
 #reviews_title, #average_title, #comments_title{
     margin-top: 1rem;
@@ -54,13 +57,14 @@
     font-weight: bold;
     margin-left: 1rem;
     margin-right: 1rem;
+    width: 20px;
+    color: #bb9e46;
 }
 
 .reviews_stats_pass {
     --star-persentage: 0%;
     flex-grow: 1;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    border-radius: 0 3px 3px 0;
     background-image: linear-gradient(to right, #bb9e46 var(--star-persentage), white var(--star-persentage));
     background-clip: content-box;
 }
@@ -68,15 +72,33 @@
 input[type="text"]{
     display: block;
     margin: 0 auto;
-    width: 50%;
+    width: 30%;
+    height: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
 }
 
+.view_comments{
+    background-color: rgb(255, 152, 0);
+    padding-bottom: 1rem;
+}
 .comment {
-    width: 80%;
-    height: 10vh;
+    width: 50%;
+    height: 50px;
     background-color: #eee;
     margin: 0 auto;
     padding: 0.5rem;
     box-sizing: border-box;
     margin-bottom: 1rem;
+    border-radius: 7px;
+}
+
+#review_view {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#comments_title {
+    color: #3f51b5;
 }

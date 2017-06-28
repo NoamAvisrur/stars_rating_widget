@@ -81,16 +81,19 @@ myApp.controller('Ctrl', function Ctrl() {
     
     this.pushComments = function(rateVal){
         var newComment = document.querySelector('input[type="text"]').value;
-        this.comments.unshift(
-            {
-	        comment: newComment,
-                rates: rateVal
-	    }
-	);
         this.StarsObject = {};
         for(let i = 0; i < rateVal; i++){
             this.StarsObject[i] = "&#9733";
         }
+        this.comments.unshift(
+            {
+	        comment: newComment,
+		StarsObj: this.StarsObject,
+                rates: rateVal,
+                
+	    }
+	);
+        console.log(this.comments);
 	document.querySelector('input[type="text"]').value = ""; 
     }
 })

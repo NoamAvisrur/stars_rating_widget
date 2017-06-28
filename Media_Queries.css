@@ -1,0 +1,11 @@
+@media screen and (max-width: 650px) {
+    input[type="text"], #review_view, .comment{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width: 1000px) {
+    input[type="text"], #review_view, .comment{
+        width: 70%;
+    }
+}
