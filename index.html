@@ -44,14 +44,11 @@
             </div> 
             <div class="view_comments">
                 <h3 id="comments_title">Comments:</h3>
-
-                    <div class="comment" ng-repeat="comment in C.comments">{{ comment.comment }}
-                        <div>
-                            <span ng-repeat="star in C.comments[0].StarsObj" ng-bind-html="star | unsafe"></span>
-                        </div>
-		    </div>
-
-
+                <div class="comment" ng-repeat="comment in C.comments">{{ comment.comment }}
+                    <div>
+                        <span ng-repeat="(key, value) in comment.StarsObj" ng-bind-html="value | unsafe"></span>
+                    </div>
+		</div>
 	    </div>   
         </div>    
     </div>

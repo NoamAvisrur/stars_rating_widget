@@ -29,7 +29,7 @@ myApp.controller('Ctrl', function Ctrl() {
     
     this.push = function(){
         selectedStars = document.querySelectorAll('.selected');  
-        if (selectedStars.length > 0){
+        if (selectedStars.length > 0 && document.querySelector('input[type="text"]').value !== ""){
             this.rates.unshift(selectedStars.length);
             localStorage.setItem('rating', JSON.stringify(this.rates));
             this.clearStars();

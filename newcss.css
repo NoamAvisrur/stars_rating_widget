@@ -37,11 +37,15 @@
 }
 #reviews_title, #average_title, #comments_title{
     margin-top: 1rem;
-    border-top: 1px solid #ddd;
+    //border-top: 1px solid #ddd;
     margin: 1rem;
     padding: 1rem;
     margin-bottom: 0;
     color: #965896;
+}
+
+#reviews_title, #average_title{
+   border-top: 1px solid #ddd;
 }
 
 #average_title {
@@ -85,13 +89,13 @@ input[type="text"]{
 }
 .comment {
     width: 50%;
-    height: 50px;
     background-color: #eee;
     margin: 0 auto;
     padding: 0.5rem;
     box-sizing: border-box;
     margin-bottom: 1rem;
     border-radius: 7px;
+    word-wrap: break-word;
 }
 
 #review_view {
